@@ -1,6 +1,7 @@
 package com.hanifd3v;
 
 import com.hanifd3v.domain.Author;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * Hello world!
@@ -12,8 +13,9 @@ public class App
     {
 
         System.out.println( "Hello World!" );
-        Author author = new Author();
-        author.setId(1L);
-        author.setName("Karen Armstrong");
+        ClassPathXmlApplicationContext appContext = new ClassPathXmlApplicationContext("application-context.xml");
+        Author author = (Author) appContext.getBean("author");
+        System.out.println(author.getId());
+        System.out.println(author.getName());
     }
 }
