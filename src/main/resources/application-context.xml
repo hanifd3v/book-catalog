@@ -11,7 +11,7 @@
         <property name="name" value="Karen Armstrong"></property>
     </bean>
     <bean id="book" class="com.hanifd3v.domain.Book">
+        <constructor-arg value="The Lost Art of Scripture"></constructor-arg>
         <constructor-arg ref="author"></constructor-arg>
-        <property name="title" value="The Lost Art of Scripture"></property>
     </bean>
 </beans>
