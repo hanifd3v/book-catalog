@@ -1,6 +1,7 @@
 package com.hanifd3v;
 
 import com.hanifd3v.domain.Author;
+import com.hanifd3v.domain.Book;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -17,5 +18,10 @@ public class App
         Author author = (Author) appContext.getBean("author");
         System.out.println(author.getId());
         System.out.println(author.getName());
+
+        Book book = (Book) appContext.getBean("book");
+        System.out.println(book.getTitle());
+        System.out.println(book.getAuthor().getId());
+        System.out.println(book.getAuthor().getName());
     }
 }
