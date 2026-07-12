@@ -1,9 +1,7 @@
 package com.hanifd3v;
 
-import com.hanifd3v.domain.Author;
-import com.hanifd3v.domain.Book;
-import com.hanifd3v.service.EmailService;
-import jakarta.mail.MessagingException;
+import com.hanifd3v.service.AuthService;
+import com.hanifd3v.service.impl.EmailServiceImpl;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -24,7 +22,9 @@ public class App
 //        System.out.println(book.getTitle());
 //        System.out.println(book.getAuthor().getId());
 //        System.out.println(book.getAuthor().getName());
-         EmailService emailService = (EmailService) appContext.getBean("emailService");
-         emailService.sendEmail("destination@gmail.com", "Your OTP", "Your OTP is 134625");
+//         EmailServiceImpl emailService = (EmailServiceImpl) appContext.getBean("emailService");
+//         emailService.sendEmail("destination@gmail.com", "Your OTP", "Your OTP is 134625");134625
+        AuthService authService = (AuthService) appContext.getBean("authService");
+        authService.login("destination@gmail.ocm");
     }
 }

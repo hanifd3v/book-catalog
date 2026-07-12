@@ -45,7 +45,11 @@
         <constructor-arg value="c9536b2da1cf96"/>
         <constructor-arg value="2b8f8e0e3b94fd"/>
     </bean>
-    <bean id="emailService" class="com.hanifd3v.service.EmailService">
+    <bean id="emailService" class="com.hanifd3v.service.impl.EmailServiceImpl">
         <constructor-arg ref="mailSession"></constructor-arg>
+    </bean>
+    <bean id="emailDummyService" class="com.hanifd3v.service.impl.EmailDummyServiceImpl"></bean>
+    <bean id="authService" class="com.hanifd3v.service.impl.AuthServiceImpl">
+        <constructor-arg ref="emailDummyService"></constructor-arg>
     </bean>
 </beans>
