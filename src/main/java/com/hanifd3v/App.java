@@ -33,7 +33,7 @@ public class App
 //         Author author = (Author) ctx.getBean("author1");
 //         System.out.println(author.getName());
 //         System.out.println(author.getId());
-         Book book1 = (Book) ctx.getBean("book1");
+         Book book1 = (Book) ctx.getBean("book2");
          System.out.println(book1.getTitle());
          System.out.println(book1.getAuthor().getName());
     }
